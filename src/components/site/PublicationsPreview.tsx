@@ -255,7 +255,7 @@ export const PublicationsPreview = () => {
             <h3 className="text-xl font-medium text-content/80 mb-6">
               In prep.
             </h3>
-            <div className="space-y-8 pl-8">
+            <div className="space-y-8 pl-4 md:pl-8">
               {inPrep.map((p) => (
                 <div key={p.title}>
                   <div className="flex no-wrap items-start gap-x-2 gap-y-1">
@@ -286,7 +286,7 @@ export const PublicationsPreview = () => {
             <h3 className="text-xl font-medium text-content/80 mb-6">
               Publications list
             </h3>
-            <div className="pl-8">
+            <div className="pl-4 md:pl-8">
               <a
                 href="https://scholar.google.com/citations?hl=en&user=_mpVAdIAAAAJ"
                 target="_blank"

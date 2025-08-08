@@ -4,16 +4,16 @@ export const Hero = () => {
       <div className="container flex min-h-[40vh] md:min-h-[48vh] items-center">
         <div className="max-w-2xl">
           <h1
-            className="font-bold text-title tracking-tight leading-tight"
+            className="text-heading font-semibold"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Lior Greenspoon
           </h1>
-          <p className="mt-4 text-base md:text-lg">
+          <p className="text-xl font-medium mt-4">
             PhD Candidate | Computational Ecology | Weizmann Institute of
             Science
           </p>
-          <p className="mt-3 text-sm md:text-base">
+          <p className="text-base mt-3">
             I'm a PhD candidate in the{" "}
             <a
               href="https://www.weizmann.ac.il/plants/"

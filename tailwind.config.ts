@@ -27,6 +27,7 @@ export default {
 			fontSize: {
 				title: ['var(--fs-title)', { lineHeight: '1.1' }],
 				heading: ['var(--fs-heading)', { lineHeight: '1.2' }],
+				xl: ['var(--fs-xl)', { lineHeight: '1.3' }],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
