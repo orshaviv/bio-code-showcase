@@ -10,7 +10,7 @@ const Hero = () => {
             PhD Candidate | Computational Ecology | Weizmann Institute of Science
           </p>
           <p className="mt-3 text-sm md:text-base text-muted-foreground">
-            I'm a PhD candidate in the <a href="https://www.weizmann.ac.il/plants/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Department of Plant and Environmental Sciences</a> at The Weizmann Institute of Science and an <a href="http://www.luc.edu/sustainability/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Institute for Environmental Sustainability (IES)</a> Fellow, working with <a href="https://www.weizmann.ac.il/plants/milo/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Professor Ron Milo</a>.
+            I'm a PhD candidate in the <a href="https://www.weizmann.ac.il/plants/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Department of Plant and Environmental Sciences</a> at&nbsp;the&nbsp;Weizmann&nbsp;Institute&nbsp;of&nbsp;Science and an <a href="http://www.luc.edu/sustainability/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Institute for Environmental Sustainability (IES)</a> Fellow, working with <a href="https://www.weizmann.ac.il/plants/milo/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Professor Ron Milo</a>.
           </p>
         </div>
       </div>
