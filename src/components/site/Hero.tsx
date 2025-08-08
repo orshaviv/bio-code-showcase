@@ -3,11 +3,14 @@ const Hero = () => {
     <section id="top" className="relative bg-hero">
       <div className="container flex min-h-[40vh] md:min-h-[48vh] items-center">
         <div className="max-w-2xl">
-          <h1 className="font-bold text-3xl md:text-5xl tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
+          <h1 className="font-bold text-2xl md:text-4xl tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
             Lior Greenspoon
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-            PhD Candidate in Computational Biology — genomics, machine learning, and systems biology. I build methods to decode biological data.
+            PhD Candidate | Computation Ecology | Weizmann Institute of Science
+          </p>
+          <p className="mt-3 text-lg md:text-xl text-muted-foreground">
+            I'm a PhD candidate in the <a href="https://www.weizmann.ac.il/plants/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Department of Plant and Environmental Sciences</a> at The Weizmann Institute of Science and an <a href="http://www.luc.edu/sustainability/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Institute for Environmental Sustainability (IES)</a> Fellow, working with <a href="https://www.weizmann.ac.il/plants/milo/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Professor Ron Milo</a>.
           </p>
         </div>
       </div>
