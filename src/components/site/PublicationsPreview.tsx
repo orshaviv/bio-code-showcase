@@ -54,7 +54,7 @@ const PublicationsPreview = () => {
             <Card key={p.title} className="group card-hover">
               <div className="md:flex md:items-stretch">
                 {p.thumbnail ? (
-                  <div className="w-full h-40 md:h-auto md:w-44 lg:w-52 flex-none">
+                  <div className="p-6 w-full h-40 md:h-auto md:w-44 lg:w-52 flex-none">
                     <img
                       src={p.thumbnail}
                       alt={`${p.title} thumbnail (treemap visualization)`}
