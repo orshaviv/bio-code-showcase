@@ -10,10 +10,12 @@ export const Index = () => {
     <div className="min-h-screen bg-surface text-content">
       <Seo />
       <SiteHeader />
-      <main>
+      <main className="flex flex-col gap-24 pb-24">
         <Hero />
         <PublicationsPreview />
+        <hr className="border-t-2 w-96 mx-auto" />
         <AboutMe />
+        <hr className="border-t-2 w-96 mx-auto" />
         <ContactSection />
       </main>
       <footer className="border-t border-accent py-8">

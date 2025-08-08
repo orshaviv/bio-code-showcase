@@ -8,7 +8,7 @@ export const ContactSection = () => {
   const linkedinUrl = "https://www.linkedin.com/in/lior-greenspoon";
 
   return (
-    <section id="contact" className="py-16 md:py-24">
+    <section id="contact">
       <div className="container">
         <h2 className="text-2xl md:text-3xl font-semibold">Contact me</h2>
         <address className="mt-8 not-italic">

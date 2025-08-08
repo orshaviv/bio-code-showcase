@@ -1,6 +1,6 @@
 export const AboutMe = () => {
   return (
-    <section id="about" className="py-16 md:py-24">
+    <section id="about">
       <div className="container">
         <h2 className="text-heading font-semibold text-secondary">About me</h2>
         <div className="mt-6 flex items-start gap-6">

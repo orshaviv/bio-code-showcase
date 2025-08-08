@@ -158,132 +158,152 @@ const inPrep: InPrepPub[] = [
 
 export const PublicationsPreview = () => {
   return (
-    <section id="publications" className="py-16 md:py-24">
+    <section id="publications">
       <div className="container">
-        <h2 className="text-heading font-semibold text-content">Research</h2>
-        <h3 className="text-xl font-medium text-content/80 mt-4">
-          Selected publications
-        </h3>
-        <div className="mt-8 grid grid-cols-1 gap-6">
-          {pubs.map((p) => (
-            <Card key={p.title} className="group card-hover">
-              <div className="md:flex md:items-stretch">
-                {p.thumbnail ? (
-                  <div className="p-6 pr-0 flex-none shrink-0">
-                    <img
-                      src={p.thumbnail}
-                      alt={`${p.title} thumbnail (treemap visualization)`}
-                      loading="lazy"
-                      className="w-[152px] h-[152px] object-cover rounded-md border-0"
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                ) : null}
-                <div className="flex-1">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex flex-wrap items-center">
-                      <a
-                        href={safeExternalUrl(p.link)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline"
-                      >
-                        {p.title}
-                      </a>
-                      <span className="ml-2 flex items-center gap-2">
-                        <Badge variant="outline">{p.venue}</Badge>
-                        <Badge variant="outline">{p.year}</Badge>
-                      </span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="bg-primary">
-                    <p className="text-sm text-secondary/70">
-                      {p.authors.map((a, idx) => {
-                        const initial =
-                          a.first?.trim()?.[0]?.toUpperCase() ?? "";
-                        const name = `${a.last} ${initial}.${
-                          a.equalContribution ? "*" : ""
-                        }`;
-                        const isLead = a.last === "Greenspoon";
-                        return (
-                          <span key={`${a.last}-${idx}`}>
-                            {isLead ? <strong>{name}</strong> : name}
-                            {idx < p.authors.length - 1 ? ", " : ""}
+        <h2 className="text-heading font-semibold text-content mb-6">
+          Research
+        </h2>
+        <div className="flex flex-col gap-8">
+          <div>
+            <h3 className="text-xl font-medium text-content/80 mb-6">
+              Selected publications
+            </h3>
+            <div className="mt-8 grid grid-cols-1 gap-6">
+              {pubs.map((p) => (
+                <Card key={p.title} className="group card-hover">
+                  <div className="md:flex md:items-stretch">
+                    {p.thumbnail ? (
+                      <div className="p-6 pr-0 flex-none shrink-0">
+                        <img
+                          src={p.thumbnail}
+                          alt={`${p.title} thumbnail (treemap visualization)`}
+                          loading="lazy"
+                          className="w-[152px] h-[152px] object-cover rounded-md border-0"
+                          style={{
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <div className="flex-1">
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex flex-wrap items-center">
+                          <a
+                            href={safeExternalUrl(p.link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {p.title}
+                          </a>
+                          <span className="ml-2 flex items-center gap-2">
+                            <Badge variant="outline">{p.venue}</Badge>
+                            <Badge variant="outline">{p.year}</Badge>
                           </span>
-                        );
-                      })}
-                    </p>
-                    <Collapsible>
-                      <CollapsibleTrigger asChild>
-                        <Button variant="outline" size="sm" className="mt-4">
-                          Abstract
-                        </Button>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="mt-2">
-                        <div className="text-sm leading-relaxed">
-                          {p.abstract ? (
-                            <p>{p.abstract}</p>
-                          ) : (
-                            <p>No abstract available.</p>
-                          )}
-                        </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </CardContent>
-                </div>
-              </div>
-            </Card>
-          ))}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="bg-primary">
+                        <p className="text-sm text-secondary/70">
+                          {p.authors.map((a, idx) => {
+                            const initial =
+                              a.first?.trim()?.[0]?.toUpperCase() ?? "";
+                            const name = `${a.last} ${initial}.${
+                              a.equalContribution ? "*" : ""
+                            }`;
+                            const isLead = a.last === "Greenspoon";
+                            return (
+                              <span key={`${a.last}-${idx}`}>
+                                {isLead ? <strong>{name}</strong> : name}
+                                {idx < p.authors.length - 1 ? ", " : ""}
+                              </span>
+                            );
+                          })}
+                        </p>
+                        <Collapsible>
+                          <CollapsibleTrigger asChild>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="mt-4"
+                            >
+                              Abstract
+                            </Button>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent className="mt-2">
+                            <div className="text-sm leading-relaxed">
+                              {p.abstract ? (
+                                <p>{p.abstract}</p>
+                              ) : (
+                                <p>No abstract available.</p>
+                              )}
+                            </div>
+                          </CollapsibleContent>
+                        </Collapsible>
+                      </CardContent>
+                    </div>
+                  </div>
+                </Card>
+              ))}
 
-          <p className="text-xs text-content/60 mt-2">* - equal contribution</p>
-        </div>
-
-        <h3 className="text-xl font-medium text-content/80 mt-8">In prep.</h3>
-        <div className="mt-6 space-y-8">
-          {inPrep.map((p) => (
-            <div key={p.title}>
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <span className="font-medium text-content">{p.title}</span>
-                <Badge variant="outline">{p.status}</Badge>
-              </div>
-              <p className="text-sm text-content/70 mt-1">
-                {p.authors.map((a, idx) => {
-                  const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
-                  const name = `${a.last} ${initial}.`;
-                  const isLead = a.last === "Greenspoon";
-                  return (
-                    <span key={`${a.last}-${idx}`}>
-                      {isLead ? <strong>{name}</strong> : name}
-                      {idx < p.authors.length - 1 ? ", " : ""}
-                    </span>
-                  );
-                })}
+              <p className="text-xs text-content/60 mt-2">
+                * - equal contribution
               </p>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <h3 className="text-xl font-medium text-content/80 mt-8 mb-2">
-          Publications list
-        </h3>
-        <div>
-          <a
-            href="https://scholar.google.com/citations?hl=en&user=_mpVAdIAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground/80"
-            aria-label="Google Scholar"
-          >
-            <img
-              src="/icons/google-scholar.svg"
-              className="w-5 h-5"
-              color="var(--content)"
-              aria-hidden="true"
-            />
-            <span className="text-muted-foreground">See my Google Scholar</span>
-          </a>
+          <div>
+            <h3 className="text-xl font-medium text-content/80 mb-6">
+              In prep.
+            </h3>
+            <div className="space-y-8 pl-8">
+              {inPrep.map((p) => (
+                <div key={p.title}>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <span className="font-medium text-content">{p.title}</span>
+                    <Badge variant="outline">{p.status}</Badge>
+                  </div>
+                  <p className="text-sm text-content/70 mt-1">
+                    {p.authors.map((a, idx) => {
+                      const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
+                      const name = `${a.last} ${initial}.`;
+                      const isLead = a.last === "Greenspoon";
+                      return (
+                        <span key={`${a.last}-${idx}`}>
+                          {isLead ? <strong>{name}</strong> : name}
+                          {idx < p.authors.length - 1 ? ", " : ""}
+                        </span>
+                      );
+                    })}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-medium text-content/80 mb-6">
+              Publications list
+            </h3>
+            <div className="pl-8">
+              <a
+                href="https://scholar.google.com/citations?hl=en&user=_mpVAdIAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-foreground/80"
+                aria-label="Google Scholar"
+              >
+                <img
+                  src="/icons/google-scholar.svg"
+                  className="w-5 h-5"
+                  color="var(--content)"
+                  aria-hidden="true"
+                />
+                <span className="text-muted-foreground">
+                  See my Google Scholar
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
