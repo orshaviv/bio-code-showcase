@@ -49,7 +49,7 @@ const PublicationsPreview = () => {
   return (
     <section id="publications" className="py-16 md:py-24">
       <div className="container">
-          <h2 className="text-2xl md:text-3xl font-semibold text-hero">Selected publications</h2>
+          <h2 className="text-xl md:text-3xl font-semibold text-hero">Selected publications</h2>
         <div className="mt-8 grid grid-cols-1 gap-6">
           {pubs.map((p) => (
             <Card key={p.title} className="group card-hover">

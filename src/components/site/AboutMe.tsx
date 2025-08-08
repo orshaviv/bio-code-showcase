@@ -2,7 +2,7 @@ const AboutMe = () => {
   return (
     <section id="about" className="py-16 md:py-24">
       <div className="container">
-        <h2 className="text-2xl md:text-3xl font-semibold text-hero">About me</h2>
+        <h2 className="text-xl md:text-3xl font-semibold text-hero">About me</h2>
         <div className="mt-6 flex items-start gap-6">
           <div className="w-40 h-40 rounded-full overflow-hidden border border-border shrink-0">
             <img
