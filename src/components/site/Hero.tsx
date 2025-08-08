@@ -3,7 +3,7 @@ const Hero = () => {
     <section id="top" className="relative bg-hero text-hero-foreground">
       <div className="container flex min-h-[40vh] md:min-h-[48vh] items-center">
         <div className="max-w-2xl">
-          <h1 className="font-bold text-xl md:text-3xl tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
+          <h1 className="font-bold text-title tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
             Lior Greenspoon
           </h1>
           <p className="mt-4 text-base md:text-lg">

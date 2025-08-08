@@ -67,6 +67,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontSize: {
+				title: ['var(--fs-title)', { lineHeight: '1.1' }],
+				heading: ['var(--fs-heading)', { lineHeight: '1.2' }],
+				lead: ['var(--fs-lead)', { lineHeight: '1.6' }],
+				body: ['var(--fs-body)', { lineHeight: '1.7' }],
+				small: ['var(--fs-small)', { lineHeight: '1.5' }],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
