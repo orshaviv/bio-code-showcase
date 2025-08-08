@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 15 40% 96%;
+    --background: 60 4% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 15 40% 96%;
@@ -51,7 +51,7 @@ All colors MUST be HSL.
     --brand: 190 95% 40%; /* Cyan/teal for computational biology */
     --brand-foreground: 0 0% 100%;
     --brand-accent: 200 92% 60%;
-    --hero: 21 59% 91%; /* Top section background (#f6e5dc Soft Blush) */
+    --hero: 220 6% 39%; /* Top section background (#5d6169 Slate) */
 
     /* Shadows & motion */
     --shadow-elevated: 0 10px 30px -10px hsl(var(--brand) / 0.25);
@@ -141,6 +141,9 @@ All colors MUST be HSL.
   }
   .bg-hero {
     background-color: hsl(var(--hero));
+  }
+  .text-hero-foreground {
+    color: hsl(var(--background));
   }
   .card-hover {
     transition: var(--transition-smooth);
