@@ -1,4 +1,4 @@
-const SiteHeader = () => {
+export const SiteHeader = () => {
   return (
     <header className="sticky top-0 z-40 w-full bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="container flex h-14 items-center justify-center">
@@ -12,4 +12,3 @@ const SiteHeader = () => {
   );
 };
 
-export default SiteHeader;

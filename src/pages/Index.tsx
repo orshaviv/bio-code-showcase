@@ -1,11 +1,11 @@
-import SiteHeader from "@/components/site/SiteHeader";
-import Hero from "@/components/site/Hero";
-import AboutMe from "@/components/site/AboutMe";
-import PublicationsPreview from "@/components/site/PublicationsPreview";
-import ContactSection from "@/components/site/ContactSection";
-import Seo from "@/components/site/Seo";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { Hero } from "@/components/site/Hero";
+import { AboutMe } from "@/components/site/AboutMe";
+import { PublicationsPreview } from "@/components/site/PublicationsPreview";
+import { ContactSection } from "@/components/site/ContactSection";
+import { Seo } from "@/components/site/Seo";
 
-const Index = () => {
+export const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Seo />
@@ -30,4 +30,3 @@ const Index = () => {
   );
 };
 
-export default Index;

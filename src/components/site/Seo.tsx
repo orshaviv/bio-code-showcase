@@ -1,20 +1,17 @@
-import React from "react";
-
-const Seo = () => {
+export const Seo = () => {
   const data = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Your Name",
-    jobTitle: "PhD Candidate in Computational Biology",
+    name: "Lior Greenspoon",
+    jobTitle:
+      "PhD Candidate | Computational Ecology | Weizmann Institute of Science",
     affiliation: {
       "@type": "Organization",
-      name: "Your Institution",
+      name: "Weizmann Institute of Science",
     },
-    url: typeof window !== 'undefined' ? window.location.origin : "",
-    email: "mailto:you@example.com",
-    sameAs: [
-      "#"
-    ],
+    url: typeof window !== "undefined" ? window.location.origin : "",
+    email: "mailto:lior.greenspoon@gmail.com",
+    sameAs: ["#"],
   };
 
   return (
@@ -25,4 +22,3 @@ const Seo = () => {
   );
 };
 
-export default Seo;

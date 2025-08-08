@@ -45,7 +45,7 @@ const pubs: Pub[] = [
   },
 ];
 
-const PublicationsPreview = () => {
+export const PublicationsPreview = () => {
   return (
     <section id="publications" className="py-16 md:py-24">
       <div className="container">
@@ -111,4 +111,3 @@ const PublicationsPreview = () => {
   );
 };
 
-export default PublicationsPreview;

@@ -1,4 +1,4 @@
-const AboutMe = () => {
+export const AboutMe = () => {
   return (
     <section id="about" className="py-16 md:py-24">
       <div className="container">
@@ -22,4 +22,3 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
