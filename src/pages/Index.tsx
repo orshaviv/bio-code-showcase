@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 
 export const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-surface text-content">
       <Seo />
       <SiteHeader />
       <main>
@@ -16,8 +16,8 @@ export const Index = () => {
         <AboutMe />
         <ContactSection />
       </main>
-      <footer className="border-t border-border py-8">
-        <div className="container text-sm text-muted-foreground flex flex-col sm:flex-row gap-2 items-center justify-between">
+      <footer className="border-t border-accent py-8">
+        <div className="container text-sm text-content/70 flex flex-col sm:flex-row gap-2 items-center justify-between">
           <p>&copy; {new Date().getFullYear()} Lior Greenspoon</p>
         </div>
       </footer>

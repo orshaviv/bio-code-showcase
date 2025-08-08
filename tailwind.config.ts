@@ -20,21 +20,9 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'var(--border)',
-				ring: 'var(--ring)',
-				background: 'var(--background)',
-				foreground: 'var(--foreground)',
-				primary: {
-					DEFAULT: 'var(--primary)',
-					foreground: 'var(--primary-foreground)'
-				},
-				brand: {
-					DEFAULT: 'var(--brand)',
-					foreground: 'var(--brand-foreground)'
-				},
-				muted: {
-					foreground: 'var(--muted-foreground)'
-				}
+				surface: 'var(--surface)',
+				content: 'var(--content)',
+				accent: 'var(--accent)',
 			},
 			fontSize: {
 				title: ['var(--fs-title)', { lineHeight: '1.1' }],
