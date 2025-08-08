@@ -8,10 +8,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 60 33% 95%;
+    --background: 75 15% 95%;
     --foreground: 222.2 84% 4.9%;
 
-    --card: 60 33% 95%;
+    --card: 75 15% 95%;
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
@@ -51,7 +51,7 @@ All colors MUST be HSL.
     --brand: 190 95% 40%; /* Cyan/teal for computational biology */
     --brand-foreground: 0 0% 100%;
     --brand-accent: 200 92% 60%;
-    --hero: 43 42% 88%; /* Top section background (#eee7d5) */
+    --hero: 255 35% 88%; /* Top section background (Misty Periwinkle) */
 
     /* Shadows & motion */
     --shadow-elevated: 0 10px 30px -10px hsl(var(--brand) / 0.25);
