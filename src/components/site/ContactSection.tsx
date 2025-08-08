@@ -16,7 +16,8 @@ const ContactSection = () => {
             <li>
               <a href={`mailto:${email}`} className="inline-flex items-center gap-2 hover:text-foreground/80" aria-label={`Email ${email}`}>
                 <Mail className="w-5 h-5" aria-hidden="true" />
-                <span className="sr-only">Email</span>
+                <span className="font-medium">Email:</span>
+                <span className="text-muted-foreground">{email}</span>
               </a>
             </li>
             <li>
@@ -28,7 +29,8 @@ const ContactSection = () => {
                 aria-label={`Bluesky profile ${blueskyHandle}`}
               >
                 <img src="/icons/bluesky.svg" alt="" className="w-5 h-5" loading="lazy" aria-hidden="true" />
-                <span className="sr-only">Bluesky</span>
+                <span className="font-medium">Bluesky:</span>
+                <span className="text-muted-foreground">{blueskyHandle}</span>
               </a>
             </li>
             <li>
@@ -40,7 +42,8 @@ const ContactSection = () => {
                 aria-label="LinkedIn profile"
               >
                 <img src="/icons/linkedin.svg" alt="" className="w-5 h-5" loading="lazy" aria-hidden="true" />
-                <span className="sr-only">LinkedIn</span>
+                <span className="font-medium">LinkedIn:</span>
+                <span className="text-muted-foreground">linkedin.com/in/lior-greenspoon</span>
               </a>
             </li>
           </ul>
