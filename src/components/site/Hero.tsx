@@ -6,10 +6,10 @@ const Hero = () => {
           <h1 className="font-bold text-xl md:text-3xl tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
             Lior Greenspoon
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-            PhD Candidate | Computation Ecology | Weizmann Institute of Science
+          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+            PhD Candidate | Computational Ecology | Weizmann Institute of Science
           </p>
-          <p className="mt-3 text-lg md:text-xl text-muted-foreground">
+          <p className="mt-3 text-sm md:text-base text-muted-foreground">
             I'm a PhD candidate in the <a href="https://www.weizmann.ac.il/plants/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Department of Plant and Environmental Sciences</a> at The Weizmann Institute of Science and an <a href="http://www.luc.edu/sustainability/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Institute for Environmental Sustainability (IES)</a> Fellow, working with <a href="https://www.weizmann.ac.il/plants/milo/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">Professor Ron Milo</a>.
           </p>
         </div>
