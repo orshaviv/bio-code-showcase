@@ -51,7 +51,7 @@ All colors MUST be HSL.
     --brand: 190 95% 40%; /* Cyan/teal for computational biology */
     --brand-foreground: 0 0% 100%;
     --brand-accent: 200 92% 60%;
-    --hero: 190 35% 88%; /* Top section background (Powder Teal) */
+    --hero: 126 13% 67%; /* Top section background (#a1b6a3 Sage Green) */
 
     /* Shadows & motion */
     --shadow-elevated: 0 10px 30px -10px hsl(var(--brand) / 0.25);
