@@ -66,14 +66,16 @@ const PublicationsPreview = () => {
                 ) : null}
                 <div className="flex-1">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-xl group-hover:text-foreground/90 transition-colors">
-                      <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {p.title}
-                      </a>
-                    </CardTitle>
-                    <div className="mt-2 flex items-center gap-2">
-                      <Badge variant="outline">{p.venue}</Badge>
-                      <Badge variant="outline">{p.year}</Badge>
+                    <div className="flex items-start justify-between gap-3">
+                      <CardTitle className="text-xl group-hover:text-foreground/90 transition-colors flex-1">
+                        <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                          {p.title}
+                        </a>
+                      </CardTitle>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Badge variant="outline">{p.venue}</Badge>
+                        <Badge variant="outline">{p.year}</Badge>
+                      </div>
                     </div>
                   </CardHeader>
                   <CardContent>
