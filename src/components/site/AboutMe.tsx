@@ -6,7 +6,7 @@ const AboutMe = () => {
         <div className="mt-6 flex items-start gap-6">
           <div className="w-40 h-40 rounded-full overflow-hidden border border-border shrink-0">
             <img
-              src="/lovable-uploads/9f18f4a9-eb2a-4a1a-8e5b-08938f946dca.png"
+              src="/lovable-uploads/8856ad5a-e62c-49e9-8927-c04283af4956.png"
               alt="Profile picture of Lior Greenspoon"
               className="w-full h-full object-cover"
               loading="lazy"
