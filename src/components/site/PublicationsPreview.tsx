@@ -303,9 +303,7 @@ export const PublicationsPreview = () => {
                   color="var(--content)"
                   aria-hidden="true"
                 />
-                <span className="text-muted-foreground">
-                  See my Google Scholar
-                </span>
+                <span className="text-muted-foreground">My Google Scholar</span>
               </a>
             </div>
           </div>
