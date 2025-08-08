@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { safeExternalUrl } from "@/lib/utils";
 
 
@@ -70,7 +70,7 @@ const PublicationsPreview = () => {
                 <div className="flex-1">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-2">
-                      <Badge variant="secondary">{p.venue}</Badge>
+                      <Badge variant="outline">{p.venue}</Badge>
                       <Badge variant="outline">{p.year}</Badge>
                     </div>
                     <CardTitle className="mt-3 text-xl group-hover:text-foreground/90 transition-colors">
@@ -93,20 +93,16 @@ const PublicationsPreview = () => {
                         );
                       })}
                     </p>
-                    <Dialog>
-                      <DialogTrigger asChild>
+                    <Collapsible>
+                      <CollapsibleTrigger asChild>
                         <Button variant="outline" size="sm" className="mt-4">Abstract</Button>
-                      </DialogTrigger>
-                      <DialogContent>
-                        <DialogHeader>
-                          <DialogTitle>{p.title}</DialogTitle>
-                          <DialogDescription>Abstract</DialogDescription>
-                        </DialogHeader>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="mt-2">
                         <div className="text-sm leading-relaxed">
                           {p.abstract ? <p>{p.abstract}</p> : <p>No abstract available.</p>}
                         </div>
-                      </DialogContent>
-                    </Dialog>
+                      </CollapsibleContent>
+                    </Collapsible>
                   </CardContent>
                 </div>
               </div>
