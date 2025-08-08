@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { safeExternalUrl } from "@/lib/utils";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 
 type Author = {
   first: string;
@@ -52,44 +52,46 @@ const PublicationsPreview = () => {
         <div className="mt-8 grid grid-cols-1 gap-6">
           {pubs.map((p) => (
             <Card key={p.title} className="group card-hover">
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-2">
-                  <Badge variant="secondary">{p.venue}</Badge>
-                  <Badge variant="outline">{p.year}</Badge>
-                </div>
-                <CardTitle className="mt-3 text-xl group-hover:text-foreground/90 transition-colors">
-                  <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    {p.title}
-                  </a>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-col md:flex-row gap-4 items-start">
+              <div className="md:flex md:items-stretch">
                 {p.thumbnail ? (
-                  <div className="w-32 md:w-40">
-                    <AspectRatio ratio={4 / 3}>
-                      <img
-                        src={p.thumbnail}
-                        alt={`${p.title} thumbnail (treemap visualization)`}
-                        loading="lazy"
-                        className="h-full w-full object-cover rounded-md border"
-                      />
-                    </AspectRatio>
+                  <div className="w-full h-40 md:h-auto md:w-44 lg:w-52 flex-none">
+                    <img
+                      src={p.thumbnail}
+                      alt={`${p.title} thumbnail (treemap visualization)`}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                 ) : null}
-                <p className="text-sm text-muted-foreground flex-1">
-                  {p.authors.map((a, idx) => {
-                    const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
-                    const name = `${a.last} ${initial}.`;
-                    const isLead = a.last === "Greenspoon";
-                    return (
-                      <span key={`${a.last}-${idx}`}>
-                        {isLead ? <strong>{name}</strong> : name}
-                        {idx < p.authors.length - 1 ? ", " : ""}
-                      </span>
-                    );
-                  })}
-                </p>
-              </CardContent>
+                <div className="flex-1">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary">{p.venue}</Badge>
+                      <Badge variant="outline">{p.year}</Badge>
+                    </div>
+                    <CardTitle className="mt-3 text-xl group-hover:text-foreground/90 transition-colors">
+                      <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        {p.title}
+                      </a>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      {p.authors.map((a, idx) => {
+                        const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
+                        const name = `${a.last} ${initial}.`;
+                        const isLead = a.last === "Greenspoon";
+                        return (
+                          <span key={`${a.last}-${idx}`}>
+                            {isLead ? <strong>{name}</strong> : name}
+                            {idx < p.authors.length - 1 ? ", " : ""}
+                          </span>
+                        );
+                      })}
+                    </p>
+                  </CardContent>
+                </div>
+              </div>
             </Card>
           ))}
         </div>
