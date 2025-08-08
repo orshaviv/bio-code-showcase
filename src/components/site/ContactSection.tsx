@@ -50,7 +50,7 @@ export const ContactSection = () => {
                 aria-label={`Bluesky profile ${blueskyHandle}`}
               >
                 <img
-                  src="/icons/bluesky.svg"
+                  src="bluesky.svg"
                   alt=""
                   className="w-5 h-5"
                   loading="lazy"
@@ -68,7 +68,7 @@ export const ContactSection = () => {
                 aria-label="LinkedIn profile"
               >
                 <img
-                  src="/icons/linkedin.svg"
+                  src="linkedin.svg"
                   alt=""
                   className="w-5 h-5"
                   loading="lazy"
