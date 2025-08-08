@@ -11,7 +11,7 @@ import { safeExternalUrl } from "@/lib/utils";
 type Author = {
   first: string;
   last: string;
-  orcid?: string;
+  equalContribution?: boolean;
 };
 
 type Pub = {
@@ -37,44 +37,37 @@ const pubs: Pub[] = [
       {
         first: "Lior",
         last: "Greenspoon",
-        orcid: "https://orcid.org/0000-0001-8385-4033",
+        equalContribution: true,
       },
-      { first: "Eyal", last: "Krieger" },
+      { first: "Eyal", last: "Krieger", equalContribution: true },
       {
         first: "Ron",
         last: "Sender",
-        orcid: "https://orcid.org/0000-0002-1165-9818",
       },
       {
         first: "Yuval",
         last: "Rosenberg",
-        orcid: "https://orcid.org/0000-0002-6681-8329",
       },
       {
         first: "Yinon M.",
         last: "Bar-On",
-        orcid: "https://orcid.org/0000-0001-8477-609X",
       },
       { first: "Uri", last: "Moran" },
       {
         first: "Tomer",
         last: "Antman",
-        orcid: "https://orcid.org/0000-0002-0454-9274",
       },
       {
         first: "Shai",
         last: "Meiri",
-        orcid: "https://orcid.org/0000-0003-3839-6330",
       },
       {
         first: "Uri",
         last: "Roll",
-        orcid: "https://orcid.org/0000-0002-5418-1164",
       },
       {
         first: "Elad",
         last: "Noor",
-        orcid: "https://orcid.org/0000-0001-8776-4799",
       },
       { first: "Ron", last: "Milo" },
     ],
@@ -92,44 +85,36 @@ const pubs: Pub[] = [
       {
         first: "Benoit",
         last: "de Pins",
-        orcid: "https://orcid.org/0000-0002-6779-8446",
       },
       {
         first: "Lior",
         last: "Greenspoon",
-        orcid: "https://orcid.org/0000-0001-8385-4033",
       },
       {
         first: "Yinon M.",
         last: "Bar-On",
-        orcid: "https://orcid.org/0000-0001-8477-609X",
       },
       {
         first: "Melina",
         last: "Shamshoum",
-        orcid: "https://orcid.org/0009-0006-8148-7878",
       },
       { first: "Roee", last: "Ben-Nissan" },
       {
         first: "Eliya",
         last: "Milshtein",
-        orcid: "https://orcid.org/0009-0005-3405-1054",
       },
       { first: "Dan", last: "Davidi" },
       {
         first: "Itai",
         last: "Sharon",
-        orcid: "https://orcid.org/0000-0003-0705-2316",
       },
       {
         first: "Oliver",
         last: "Mueller-Cajar",
-        orcid: "https://orcid.org/0000-0003-2866-5963",
       },
       {
         first: "Elad",
         last: "Noor",
-        orcid: "https://orcid.org/0000-0001-8776-4799",
       },
       { first: "Ron", last: "Milo" },
     ],
@@ -218,7 +203,9 @@ export const PublicationsPreview = () => {
                       {p.authors.map((a, idx) => {
                         const initial =
                           a.first?.trim()?.[0]?.toUpperCase() ?? "";
-                        const name = `${a.last} ${initial}.`;
+                        const name = `${a.last} ${initial}.${
+                          a.equalContribution ? "*" : ""
+                        }`;
                         const isLead = a.last === "Greenspoon";
                         return (
                           <span key={`${a.last}-${idx}`}>
@@ -249,9 +236,11 @@ export const PublicationsPreview = () => {
               </div>
             </Card>
           ))}
+
+          <p className="text-xs text-content/60 mt-2">* - equal contribution</p>
         </div>
 
-        <h3 className="text-xl font-medium text-content/80 mt-4">In prep</h3>
+        <h3 className="text-xl font-medium text-content/80 mt-8">In prep.</h3>
         <div className="mt-6 space-y-8">
           {inPrep.map((p) => (
             <div key={p.title}>
@@ -274,6 +263,27 @@ export const PublicationsPreview = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        <h3 className="text-xl font-medium text-content/80 mt-8 mb-2">
+          Publications list
+        </h3>
+        <div>
+          <a
+            href="https://scholar.google.com/citations?hl=en&user=_mpVAdIAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-foreground/80"
+            aria-label="Google Scholar"
+          >
+            <img
+              src="/icons/google-scholar.svg"
+              className="w-5 h-5"
+              color="var(--content)"
+              aria-hidden="true"
+            />
+            <span className="text-muted-foreground">See my Google Scholar</span>
+          </a>
         </div>
       </div>
     </section>
