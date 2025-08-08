@@ -63,7 +63,7 @@ const PublicationsPreview = () => {
                       src={p.thumbnail}
                       alt={`${p.title} thumbnail (treemap visualization)`}
                       loading="lazy"
-                      className="h-full w-full object-cover rounded-md"
+                      className="h-full w-full object-cover rounded-md border-0"
                     />
                   </div>
                 ) : null}
