@@ -25,7 +25,7 @@ export const Hero = () => {
             </a>{" "}
             at the Weizmann Institute of Science and an{" "}
             <a
-              href="http://www.luc.edu/sustainability/"
+              href="https://www.weizmann.ac.il/sustainability"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 hover:opacity-90 whitespace-nowrap"
