@@ -1,9 +1,9 @@
-import { SiteHeader } from "@/components/site/SiteHeader";
-import { Hero } from "@/components/site/Hero";
 import { AboutMe } from "@/components/site/AboutMe";
-import { PublicationsPreview } from "@/components/site/PublicationsPreview";
 import { ContactSection } from "@/components/site/ContactSection";
+import { Hero } from "@/components/site/Hero";
+import { PublicationsPreview } from "@/components/site/PublicationsPreview";
 import { Seo } from "@/components/site/Seo";
+import { SiteHeader } from "@/components/site/SiteHeader";
 
 export const Index = () => {
   return (
@@ -19,14 +19,8 @@ export const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container text-sm text-muted-foreground flex flex-col sm:flex-row gap-2 items-center justify-between">
           <p>&copy; {new Date().getFullYear()} Lior Greenspoon</p>
-          <nav className="flex items-center gap-4">
-            <a href="#publications" className="hover:text-foreground/80">Publications</a>
-            <a href="#about" className="hover:text-foreground/80">About me</a>
-            <a href="#contact" className="hover:text-foreground/80">Contact</a>
-          </nav>
         </div>
       </footer>
     </div>
   );
 };
-
