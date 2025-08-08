@@ -47,9 +47,9 @@ const PublicationsPreview = () => {
       <div className="container">
         <h2 className="text-2xl md:text-3xl font-semibold">Publications</h2>
         <p className="mt-2 text-muted-foreground max-w-2xl">
-          TBD: This is a placeholder list of publications with links.
+          Selected publications
         </p>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-6">
           {pubs.map((p) => (
             <Card key={p.title} className="group card-hover">
               <CardHeader className="pb-3">
