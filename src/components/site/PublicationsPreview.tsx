@@ -1,43 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { safeExternalUrl } from "@/lib/utils";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 type Pub = {
   title: string;
-  authors: string;
-  venue: string;
-  year: string;
+  authors?: string;
+  venue?: string;
+  year?: string;
   link?: string;
+  thumbnail?: string;
 };
 
 const pubs: Pub[] = [
   {
-    title: "Integrative modeling of single-cell multi-omics reveals regulatory programs",
-    authors: "Lior Greenspoon, et al.",
-    venue: "Nature Methods",
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Bayesian fine-mapping improves interpretation of rare variants",
-    authors: "Lior Greenspoon, et al.",
-    venue: "Bioinformatics",
-    year: "2023",
-    link: "#",
-  },
-  {
-    title: "Graph neural networks for genotype–phenotype prediction",
-    authors: "Lior Greenspoon, et al.",
-    venue: "NeurIPS",
+    title: "The global biomass of wild mammals",
+    authors: "",
+    venue: "PNAS",
     year: "2022",
-    link: "#",
-  },
-  {
-    title: "Scalable alignment of single-cell trajectories across conditions",
-    authors: "Lior Greenspoon, et al.",
-    venue: "Cell Systems",
-    year: "2021",
-    link: "#",
+    link: "https://www.pnas.org/doi/10.1073/pnas.2204892120",
+    thumbnail: "/lovable-uploads/7d1112de-5875-4d7b-a048-79aadf8b0c1b.png",
   },
 ];
 
@@ -63,8 +45,20 @@ const PublicationsPreview = () => {
                   </a>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
-                {p.authors}
+              <CardContent className="flex flex-col md:flex-row gap-4 items-start">
+                <p className="text-sm text-muted-foreground flex-1">{p.authors || ""}</p>
+                {p.thumbnail ? (
+                  <div className="ml-auto w-32 md:w-40">
+                    <AspectRatio ratio={4 / 3}>
+                      <img
+                        src={p.thumbnail}
+                        alt={`${p.title} thumbnail (treemap visualization)`}
+                        loading="lazy"
+                        className="h-full w-full object-cover rounded-md border"
+                      />
+                    </AspectRatio>
+                  </div>
+                ) : null}
               </CardContent>
             </Card>
           ))}
