@@ -20,60 +20,25 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				border: 'var(--border)',
+				ring: 'var(--ring)',
+				background: 'var(--background)',
+				foreground: 'var(--foreground)',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'var(--primary)',
+					foreground: 'var(--primary-foreground)'
 				},
 				brand: {
-					DEFAULT: 'hsl(var(--brand))',
-					foreground: 'hsl(var(--brand-foreground))'
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					DEFAULT: 'var(--brand)',
+					foreground: 'var(--brand-foreground)'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+					foreground: 'var(--muted-foreground)'
 				}
 			},
 			fontSize: {
 				title: ['var(--fs-title)', { lineHeight: '1.1' }],
 				heading: ['var(--fs-heading)', { lineHeight: '1.2' }],
-				lead: ['var(--fs-lead)', { lineHeight: '1.6' }],
-				body: ['var(--fs-body)', { lineHeight: '1.7' }],
-				small: ['var(--fs-small)', { lineHeight: '1.5' }],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
