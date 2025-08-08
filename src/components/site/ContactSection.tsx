@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Globe } from "lucide-react";
+import { Mail } from "lucide-react";
 
 
 const ContactSection = () => {
@@ -14,10 +14,9 @@ const ContactSection = () => {
         <address className="mt-8 not-italic">
           <ul className="space-y-3">
             <li>
-              <a href={`mailto:${email}`} className="inline-flex items-center gap-2 hover:text-foreground/80">
-                <Mail className="w-4 h-4" aria-hidden="true" />
-                <span className="font-medium">Email:</span>
-                <span className="text-muted-foreground">{email}</span>
+              <a href={`mailto:${email}`} className="inline-flex items-center gap-2 hover:text-foreground/80" aria-label={`Email ${email}`}>
+                <Mail className="w-5 h-5" aria-hidden="true" />
+                <span className="sr-only">Email</span>
               </a>
             </li>
             <li>
@@ -28,9 +27,8 @@ const ContactSection = () => {
                 className="inline-flex items-center gap-2 hover:text-foreground/80"
                 aria-label={`Bluesky profile ${blueskyHandle}`}
               >
-                <Globe className="w-4 h-4" aria-hidden="true" />
-                <span className="font-medium">Bluesky:</span>
-                <span className="text-muted-foreground">{blueskyHandle}</span>
+                <img src="/icons/bluesky.svg" alt="" className="w-5 h-5" loading="lazy" aria-hidden="true" />
+                <span className="sr-only">Bluesky</span>
               </a>
             </li>
             <li>
@@ -41,9 +39,8 @@ const ContactSection = () => {
                 className="inline-flex items-center gap-2 hover:text-foreground/80"
                 aria-label="LinkedIn profile"
               >
-                <Linkedin className="w-4 h-4" aria-hidden="true" />
-                <span className="font-medium">LinkedIn:</span>
-                <span className="text-muted-foreground">linkedin.com/in/lior-greenspoon</span>
+                <img src="/icons/linkedin.svg" alt="" className="w-5 h-5" loading="lazy" aria-hidden="true" />
+                <span className="sr-only">LinkedIn</span>
               </a>
             </li>
           </ul>
