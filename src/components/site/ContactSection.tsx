@@ -1,7 +1,8 @@
 import { Mail } from "lucide-react";
 
 export const ContactSection = () => {
-  const email = "lior.greenspoon@gmail.com";
+  const personalEmail = "lior.greenspoon@gmail.com";
+  const workEmail = "lior.greenspoon@weizmann.ac.il";
   const blueskyHandle = "@liorgreenspoon.bsky.social";
   const blueskyUrl = "https://bsky.app/profile/liorgreenspoon.bsky.social";
   const linkedinUrl = "https://www.linkedin.com/in/lior-greenspoon";
@@ -9,21 +10,35 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="container">
-        <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">Contact me</h2>
         <address className="mt-8 not-italic">
           <ul className="space-y-3">
             <li>
               <a
-                href={`mailto:${email}`}
+                href={`mailto:${personalEmail}`}
                 className="inline-flex items-center gap-2 hover:text-foreground/80"
-                aria-label={`Email ${email}`}
+                aria-label={`Email ${personalEmail}`}
               >
                 <Mail
                   className="w-5 h-5"
                   color="var(--content)"
                   aria-hidden="true"
                 />
-                <span className="text-muted-foreground">{email}</span>
+                <span className="text-muted-foreground">{personalEmail}</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${workEmail}`}
+                className="inline-flex items-center gap-2 hover:text-foreground/80"
+                aria-label={`Email ${workEmail}`}
+              >
+                <Mail
+                  className="w-5 h-5"
+                  color="var(--content)"
+                  aria-hidden="true"
+                />
+                <span className="text-muted-foreground">{workEmail}</span>
               </a>
             </li>
             <li>

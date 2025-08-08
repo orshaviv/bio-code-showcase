@@ -13,9 +13,19 @@ export const AboutMe = () => {
             />
           </div>
           <p className="text-secondary/70 max-w-2xl">
-            I'm a PhD candidate passionate about computational biology. This is
-            placeholder text; we can replace it with your real bio, interests,
-            and current projects.
+            I use data-driven, computational methods to answer key quantitative
+            questions about our biosphere. <br />
+            <br /> My corrent focus is on quantifying wildlife in an the age of
+            intense human-driven pressures on our planet's ecosystems. Following
+            our estimate of the current-day global biomass composition of all
+            mammals, we are tackling questions like - what was the temporal
+            dynamics of mammalian biomass over the past two centuries? What is
+            the current global biomass of all birds, and how does it distribute
+            between various groups?
+            <br />
+            <br />I hold a dual BSc, in computer science and geology, from Ben
+            Ben Gurion University of the Negev, and an MSc in global ecology at
+            the Weizmann Institute of Science.
           </p>
         </div>
       </div>
