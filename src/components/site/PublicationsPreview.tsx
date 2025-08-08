@@ -49,21 +49,18 @@ const PublicationsPreview = () => {
   return (
     <section id="publications" className="py-16 md:py-24">
       <div className="container">
-        <h2 className="text-2xl md:text-3xl font-semibold">Publications</h2>
-        <p className="mt-2 text-muted-foreground max-w-2xl">
-          Selected publications
-        </p>
+          <h2 className="text-2xl md:text-3xl font-semibold">Selected publications</h2>
         <div className="mt-8 grid grid-cols-1 gap-6">
           {pubs.map((p) => (
             <Card key={p.title} className="group card-hover">
               <div className="md:flex md:items-stretch">
                 {p.thumbnail ? (
-                  <div className="p-6 pr-0 w-full h-40 md:h-auto md:w-44 lg:w-52 flex-none">
+                  <div className="p-6 pr-0 flex-none shrink-0">
                     <img
                       src={p.thumbnail}
                       alt={`${p.title} thumbnail (treemap visualization)`}
                       loading="lazy"
-                      className="h-full w-full object-cover rounded-md border-0"
+                      className="w-[152px] h-[152px] object-cover rounded-md border-0"
                     />
                   </div>
                 ) : null}
