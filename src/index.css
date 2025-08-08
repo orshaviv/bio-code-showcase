@@ -142,6 +142,9 @@ All colors MUST be HSL.
   .bg-hero {
     background-color: hsl(var(--hero));
   }
+  .text-hero {
+    color: hsl(var(--hero));
+  }
   .text-hero-foreground {
     color: hsl(var(--background));
   }
