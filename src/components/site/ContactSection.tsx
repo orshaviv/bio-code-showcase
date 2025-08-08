@@ -18,7 +18,11 @@ export const ContactSection = () => {
                 className="inline-flex items-center gap-2 hover:text-foreground/80"
                 aria-label={`Email ${email}`}
               >
-                <Mail className="w-5 h-5" aria-hidden="true" />
+                <Mail
+                  className="w-5 h-5"
+                  color="var(--content)"
+                  aria-hidden="true"
+                />
                 <span className="text-muted-foreground">{email}</span>
               </a>
             </li>
@@ -66,4 +70,3 @@ export const ContactSection = () => {
     </section>
   );
 };
-
