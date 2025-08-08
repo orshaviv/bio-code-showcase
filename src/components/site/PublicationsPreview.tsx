@@ -171,9 +171,9 @@ export const PublicationsPreview = () => {
             <div className="mt-8 grid grid-cols-1 gap-6">
               {pubs.map((p) => (
                 <Card key={p.title} className="group card-hover">
-                  <div className="md:flex md:items-stretch">
+                  <div className="flex flex-col md:flex-row md:items-stretch">
                     {p.thumbnail ? (
-                      <div className="p-6 pr-0 flex-none shrink-0">
+                      <div className="p-6 md:pr-0 flex justify-center md:justify-start flex-none shrink-0">
                         <img
                           src={p.thumbnail}
                           alt={`${p.title} thumbnail (treemap visualization)`}
@@ -187,19 +187,19 @@ export const PublicationsPreview = () => {
                     ) : null}
                     <div className="flex-1">
                       <CardHeader className="pb-3">
-                        <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex no-wrap items-start">
+                        <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors">
                           <a
                             href={safeExternalUrl(p.link)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:underline"
+                            className="hover:underline block mb-2"
                           >
                             {p.title}
                           </a>
-                          <span className="ml-2 pt-1 flex items-center gap-2">
+                          <div className="flex flex-wrap items-center gap-2">
                             <Badge variant="outline">{p.venue}</Badge>
                             <Badge variant="outline">{p.year}</Badge>
-                          </span>
+                          </div>
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="bg-primary">

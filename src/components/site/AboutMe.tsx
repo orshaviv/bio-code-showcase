@@ -3,7 +3,7 @@ export const AboutMe = () => {
     <section id="about">
       <div className="container">
         <h2 className="text-heading font-semibold text-secondary">About me</h2>
-        <div className="mt-6 flex items-start gap-6">
+        <div className="mt-6 flex flex-wrap items-start gap-6">
           <div className="w-32 h-32 rounded-full overflow-hidden border border-secondary shrink-0">
             <img
               src="/lovable-uploads/8856ad5a-e62c-49e9-8927-c04283af4956.png"
