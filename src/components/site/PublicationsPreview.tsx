@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { safeExternalUrl } from "@/lib/utils";
 
 type Pub = {
   title: string;
@@ -57,7 +58,7 @@ const PublicationsPreview = () => {
                   <Badge variant="outline">{p.year}</Badge>
                 </div>
                 <CardTitle className="mt-3 text-xl group-hover:text-foreground/90 transition-colors">
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {p.title}
                   </a>
                 </CardTitle>
