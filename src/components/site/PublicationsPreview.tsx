@@ -187,7 +187,7 @@ export const PublicationsPreview = () => {
                     ) : null}
                     <div className="flex-1">
                       <CardHeader className="pb-3">
-                        <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex flex-wrap items-center">
+                        <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex no-wrap items-start">
                           <a
                             href={safeExternalUrl(p.link)}
                             target="_blank"
@@ -196,7 +196,7 @@ export const PublicationsPreview = () => {
                           >
                             {p.title}
                           </a>
-                          <span className="ml-2 flex items-center gap-2">
+                          <span className="ml-2 pt-1 flex items-center gap-2">
                             <Badge variant="outline">{p.venue}</Badge>
                             <Badge variant="outline">{p.year}</Badge>
                           </span>
