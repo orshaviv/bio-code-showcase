@@ -7,9 +7,9 @@
 @layer base {
   :root {
     /* Core color palette */
-    --surface: #f8f7f5;      /* Light background/surface color */
-    --content: #2d3748;      /* Darker text/content color for better contrast */
-    --accent: #e2e8f0;       /* Border and subtle accent color */
+    --surface: #fffaec; /* Light background/surface color */
+    --content: #3d3d3d; /* Darker text/content color for better contrast */
+    --accent: #e2e8f0; /* Border and subtle accent color */
 
     /* Typography */
     --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,

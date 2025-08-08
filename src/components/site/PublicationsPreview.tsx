@@ -49,7 +49,7 @@ export const PublicationsPreview = () => {
   return (
     <section id="publications" className="py-16 md:py-24">
       <div className="container">
-          <h2 className="text-heading font-semibold text-hero">Selected publications</h2>
+          <h2 className="text-heading font-semibold text-secondary">Selected publications</h2>
         <div className="mt-8 grid grid-cols-1 gap-6">
           {pubs.map((p) => (
             <Card key={p.title} className="group card-hover">
@@ -66,7 +66,7 @@ export const PublicationsPreview = () => {
                 ) : null}
                 <div className="flex-1">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-xl group-hover:text-foreground/90 transition-colors flex flex-wrap items-center">
+                    <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors flex flex-wrap items-center">
                       <a href={safeExternalUrl(p.link)} target="_blank" rel="noopener noreferrer" className="hover:underline">
                         {p.title}
                       </a>
@@ -77,7 +77,7 @@ export const PublicationsPreview = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-secondary/70">
                       {p.authors.map((a, idx) => {
                         const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
                         const name = `${a.last} ${initial}.`;
