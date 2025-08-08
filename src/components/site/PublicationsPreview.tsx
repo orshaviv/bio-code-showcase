@@ -3,9 +3,15 @@ import { Badge } from "@/components/ui/badge";
 import { safeExternalUrl } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
+type Author = {
+  first: string;
+  last: string;
+  orcid?: string;
+};
+
 type Pub = {
   title: string;
-  authors?: string;
+  authors: Author[];
   venue?: string;
   year?: string;
   link?: string;
@@ -15,9 +21,21 @@ type Pub = {
 const pubs: Pub[] = [
   {
     title: "The global biomass of wild mammals",
-    authors: "",
+    authors: [
+      { first: "Lior", last: "Greenspoon", orcid: "https://orcid.org/0000-0001-8385-4033" },
+      { first: "Eyal", last: "Krieger" },
+      { first: "Ron", last: "Sender", orcid: "https://orcid.org/0000-0002-1165-9818" },
+      { first: "Yuval", last: "Rosenberg", orcid: "https://orcid.org/0000-0002-6681-8329" },
+      { first: "Yinon M.", last: "Bar-On", orcid: "https://orcid.org/0000-0001-8477-609X" },
+      { first: "Uri", last: "Moran" },
+      { first: "Tomer", last: "Antman", orcid: "https://orcid.org/0000-0002-0454-9274" },
+      { first: "Shai", last: "Meiri", orcid: "https://orcid.org/0000-0003-3839-6330" },
+      { first: "Uri", last: "Roll", orcid: "https://orcid.org/0000-0002-5418-1164" },
+      { first: "Elad", last: "Noor", orcid: "https://orcid.org/0000-0001-8776-4799" },
+      { first: "Ron", last: "Milo" },
+    ],
     venue: "PNAS",
-    year: "2022",
+    year: "2023",
     link: "https://www.pnas.org/doi/10.1073/pnas.2204892120",
     thumbnail: "/lovable-uploads/7d1112de-5875-4d7b-a048-79aadf8b0c1b.png",
   },
@@ -46,9 +64,8 @@ const PublicationsPreview = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col md:flex-row gap-4 items-start">
-                <p className="text-sm text-muted-foreground flex-1">{p.authors || ""}</p>
                 {p.thumbnail ? (
-                  <div className="ml-auto w-32 md:w-40">
+                  <div className="w-32 md:w-40">
                     <AspectRatio ratio={4 / 3}>
                       <img
                         src={p.thumbnail}
@@ -59,6 +76,19 @@ const PublicationsPreview = () => {
                     </AspectRatio>
                   </div>
                 ) : null}
+                <p className="text-sm text-muted-foreground flex-1">
+                  {p.authors.map((a, idx) => {
+                    const initial = a.first?.trim()?.[0]?.toUpperCase() ?? "";
+                    const name = `${a.last} ${initial}.`;
+                    const isLead = a.last === "Greenspoon";
+                    return (
+                      <span key={`${a.last}-${idx}`}>
+                        {isLead ? <strong>{name}</strong> : name}
+                        {idx < p.authors.length - 1 ? ", " : ""}
+                      </span>
+                    );
+                  })}
+                </p>
               </CardContent>
             </Card>
           ))}
