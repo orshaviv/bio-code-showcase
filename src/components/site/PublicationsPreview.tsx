@@ -258,9 +258,11 @@ export const PublicationsPreview = () => {
             <div className="space-y-8 pl-8">
               {inPrep.map((p) => (
                 <div key={p.title}>
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span className="font-medium text-content">{p.title}</span>
-                    <Badge variant="outline">{p.status}</Badge>
+                  <div className="flex no-wrap items-start gap-x-2 gap-y-1">
+                    <p className="font-medium text-content">{p.title}</p>
+                    <Badge variant="outline" className="pt-1 text-nowrap">
+                      {p.status}
+                    </Badge>
                   </div>
                   <p className="text-sm text-content/70 mt-1">
                     {p.authors.map((a, idx) => {
