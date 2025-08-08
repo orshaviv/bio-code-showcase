@@ -170,7 +170,10 @@ export const PublicationsPreview = () => {
             </h3>
             <div className="mt-8 grid grid-cols-1 gap-6">
               {pubs.map((p) => (
-                <Card key={p.title} className="group card-hover">
+                <Card
+                  key={p.title}
+                  className="group card-hover h-[fit-content]"
+                >
                   <div className="flex flex-col md:flex-row md:items-stretch">
                     {p.thumbnail ? (
                       <div className="p-6 md:pr-0 flex justify-center md:justify-start flex-none shrink-0">
@@ -178,7 +181,7 @@ export const PublicationsPreview = () => {
                           src={p.thumbnail}
                           alt={`${p.title} thumbnail (treemap visualization)`}
                           loading="lazy"
-                          className="w-[152px] h-[152px] object-cover rounded-md border-0"
+                          className="w-[170px] h-[170px] object-cover rounded-md border-0"
                           style={{
                             objectFit: "cover",
                           }}
@@ -186,21 +189,21 @@ export const PublicationsPreview = () => {
                       </div>
                     ) : null}
                     <div className="flex-1">
-                      <CardHeader className="pb-3">
+                      <CardHeader className="pb-3 flex flex-row items-start gap-2">
                         <CardTitle className="text-xl group-hover:text-secondary/90 transition-colors">
                           <a
                             href={safeExternalUrl(p.link)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:underline block mb-2"
+                            className="hover:underline block"
                           >
                             {p.title}
                           </a>
-                          <div className="flex flex-wrap items-center gap-2">
-                            <Badge variant="outline">{p.venue}</Badge>
-                            <Badge variant="outline">{p.year}</Badge>
-                          </div>
                         </CardTitle>
+                        <div className="flex flex-row items-start gap-2">
+                          <Badge variant="outline">{p.venue}</Badge>
+                          <Badge variant="outline">{p.year}</Badge>
+                        </div>
                       </CardHeader>
                       <CardContent className="bg-primary">
                         <p className="text-sm text-secondary/70">
