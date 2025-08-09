@@ -9,7 +9,7 @@ export const Hero = () => {
           >
             Lior Greenspoon
           </h1>
-          <p className="text-xl font-medium mt-4">
+          <p className="text-xl font-medium mt-4 md:whitespace-nowrap">
             PhD Candidate | Computational Ecology | Weizmann Institute of
             Science
           </p>
@@ -19,7 +19,7 @@ export const Hero = () => {
               href="https://www.weizmann.ac.il/plants/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:opacity-90 whitespace-nowrap"
+              className="underline underline-offset-4 hover:opacity-90 md:whitespace-nowrap"
             >
               Department of Plant and Environmental Sciences
             </a>{" "}
@@ -28,7 +28,7 @@ export const Hero = () => {
               href="https://www.weizmann.ac.il/sustainability"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:opacity-90 whitespace-nowrap"
+              className="underline underline-offset-4 hover:opacity-90 md:whitespace-nowrap"
             >
               Institute for Environmental Sustainability (IES)
             </a>{" "}
@@ -37,7 +37,7 @@ export const Hero = () => {
               href="https://www.weizmann.ac.il/plants/milo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:opacity-90 whitespace-nowrap"
+              className="underline underline-offset-4 hover:opacity-90 md:whitespace-nowrap"
             >
               Professor Ron Milo
             </a>
