@@ -15,7 +15,7 @@ export const AboutMe = () => {
           <p className="text-secondary/70 max-w-2xl">
             I use data-driven, computational methods to answer key quantitative
             questions about our biosphere. <br />
-            <br /> My corrent focus is on quantifying wildlife in an the age of
+            <br /> My current focus is on quantifying wildlife in an the age of
             intense human-driven pressures on our planet's ecosystems. Following
             our estimate of the current-day global biomass composition of all
             mammals, we are tackling questions like - what was the temporal
@@ -24,8 +24,8 @@ export const AboutMe = () => {
             between various groups?
             <br />
             <br />I hold a dual BSc, in computer science and geology, from Ben
-            Ben Gurion University of the Negev, and an MSc in global ecology at
-            the Weizmann Institute of Science.
+            Ben Gurion University of the Negev, and an MSc in global ecology
+            from the Weizmann Institute of Science.
           </p>
         </div>
       </div>
