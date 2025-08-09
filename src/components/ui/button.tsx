@@ -41,7 +41,7 @@ interface ButtonProps
   asChild?: boolean;
 }
 
-export const Button = ({ className, variant, size, ...props }) => {
+export const Button = ({ className, variant, size, ...props }: ButtonProps) => {
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
