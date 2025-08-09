@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && printf 'liorgreenspoon.com\n' > dist/CNAME",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "eject": "vite build && rm -rf docs && cp -R dist docs && printf 'liorgreenspoon.com\n' > docs/CNAME"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.11",
