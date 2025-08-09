@@ -13,9 +13,9 @@ export const Index = () => {
       <main className="flex flex-col gap-24 pb-24">
         <Hero />
         <PublicationsPreview />
-        <hr className="border-t-2 w-96 mx-auto" />
+        <hr className="border-t-2 w-48 sm:w-96 mx-auto" />
         <AboutMe />
-        <hr className="border-t-2 w-96 mx-auto" />
+        <hr className="border-t-2 w-48 sm:w-96 mx-auto" />
         <ContactSection />
       </main>
       <footer className="border-t border-accent py-8">
