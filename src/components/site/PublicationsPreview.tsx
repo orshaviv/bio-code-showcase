@@ -185,7 +185,7 @@ export const PublicationsPreview = () => {
                           src={p.thumbnail}
                           alt={`${p.title} thumbnail (treemap visualization)`}
                           loading="lazy"
-                          className="w-[170px] h-[170px] object-cover rounded-md"
+                          className="w-[170px] h-[170px] object-cover rounded-md bg-white"
                           style={{
                             objectFit: "cover",
                           }}
