@@ -145,7 +145,7 @@ const inPrep: InPrepPub[] = [
     title: "The Global Biomass of Birds",
     authors: [
       { first: "Lior", last: "Greenspoon" },
-      { first: "Shmuel", last: "Amar" },
+      { first: "Asaf", last: "Shmuel" },
       { first: "Adam", last: "Berryman" },
       { first: "Yuval", last: "Rosenberg" },
       { first: "Omer", last: "Amar" },
