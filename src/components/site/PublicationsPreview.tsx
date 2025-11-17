@@ -34,11 +34,7 @@ const pubs: Pub[] = [
   {
     title: "The global biomass of mammals since 1850",
     authors: [
-      {
-        first: "Lior",
-        last: "Greenspoon",
-        equalContribution: true,
-      },
+      { first: "Lior", last: "Greenspoon" },
       { first: "Noam", last: "Ramot" },
       { first: "Uri", last: "Moran" },
       { first: "Uri", last: "Roll" },
