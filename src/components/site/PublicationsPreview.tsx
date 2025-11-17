@@ -27,10 +27,32 @@ type Pub = {
 type InPrepPub = {
   title: string;
   authors: Author[];
-  status: "In prep" | "Under Revision";
+  status: "In prep" | "Under Revision" | "Submitted";
 };
 
 const pubs: Pub[] = [
+  {
+    title: "The global biomass of mammals since 1850",
+    authors: [
+      {
+        first: "Lior",
+        last: "Greenspoon",
+        equalContribution: true,
+      },
+      { first: "Noam", last: "Ramot" },
+      { first: "Uri", last: "Moran" },
+      { first: "Uri", last: "Roll" },
+      { first: "Rob", last: "Phillips" },
+      { first: "Elad", last: "Noor" },
+      { first: "Ron", last: "Milo" },
+    ],
+    venue: "Nature Communications",
+    year: "2025",
+    link: "https://www.nature.com/articles/s41467-025-63888-z",
+    thumbnail: "global-biomass-mammals-1850.png",
+    abstract:
+      "Mammals are of central interest in ecology and conservation science. Here, we estimate the trajectory of mammal biomass globally over time — including humans, domesticated and wild mammals. According to our estimates, in the 1850s, the combined biomass of wild mammals was ≈200 Mt (million tonnes), roughly equal to that of humanity and its domesticated mammals at that time. Since then, human and domesticated mammal populations have grown rapidly, reaching their current combined biomass of ≈1100 Mt. During the same period, the total biomass of wild mammals decreased by more than 2-fold. We estimate that, despite a moderate increase in the recent decades, the global biomass of wild marine mammals has declined by ≈70% since the 1850s. This provides a broader perspective to observed species extinctions, with ≈2% of marine mammal species recorded as extinct during the same period. While historical wild mammal biomass estimates rely on limited data and have various uncertainties, they provide a complementary perspective to species extinctions and other metrics in tracking the status of wildlife. This work additionally provides a quantitative view on the rapid human-induced shift in the composition of mammalian biomass over the past two centuries.",
+  },
   {
     title: "The global biomass of wild mammals",
     authors: [
@@ -129,19 +151,6 @@ const pubs: Pub[] = [
 
 const inPrep: InPrepPub[] = [
   {
-    title: "The Global Biomass of Mammals Since 1850",
-    authors: [
-      { first: "Lior", last: "Greenspoon" },
-      { first: "Noam", last: "Ramot" },
-      { first: "Uri", last: "Moran" },
-      { first: "Uri", last: "Roll" },
-      { first: "Uriel", last: "Phillips" },
-      { first: "Elad", last: "Noor" },
-      { first: "Ron", last: "Milo" },
-    ],
-    status: "Under Revision",
-  },
-  {
     title: "The Global Biomass of Birds",
     authors: [
       { first: "Lior", last: "Greenspoon" },
@@ -156,7 +165,7 @@ const inPrep: InPrepPub[] = [
       { first: "Simon", last: "Butchart" },
       { first: "Ron", last: "Milo" },
     ],
-    status: "In prep",
+    status: "Submitted",
   },
 ];
 
